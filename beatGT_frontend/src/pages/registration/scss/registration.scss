@@ -1,0 +1,54 @@
+@import "../../../global_styles/mixins.scss";
+@import "../../../global_styles/constants.scss";
+
+.registration-container {
+    height: 100vh;
+    @include flex-row-center-center;
+
+    &__form {
+        @include flex-column-around-center;
+        background-color: $box-color;
+        height: calc(100vh - 40%);
+        z-index: 10;
+        @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+        padding: 0 20px;
+
+        &__note {
+            text-align: center;
+            @include media-text(white, 12pt, 32pt);
+        }
+
+        &__link {
+            @include media-text(white, 8pt, 14pt);
+        }
+
+        &__link-active {
+            color: rgb(48, 0, 95);
+        }
+
+        &__error-label {
+            text-align: center;
+            @include media-text($error-color, 12pt, 16pt);
+        }
+    }
+
+    &__avatar-box {
+        @include flex-column-around-center;
+        background-color: $box-color;
+        height: calc(100vh - 40%);
+        z-index: 10;
+        @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+        padding: 0 20px;
+
+        &__error-label {
+            text-align: center;
+            @include media-text(red, 12pt, 16pt);
+        }
+
+        &__note {
+            text-align: center;
+            @include media-text(white, 12pt, 16pt);
+        }
+
+    }
+}

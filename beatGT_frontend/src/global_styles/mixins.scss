@@ -1,0 +1,84 @@
+@mixin flex-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-none-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-none-center{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-around-wrap{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+@mixin flex-arround-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-arr-center{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-column-around-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-row-center-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column-none-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin media-text($color, $min-value, $max-value) {
+    color: $color;
+    font-size: clamp($min-value, 2.5vw, $max-value);
+}
+
+@mixin shadow-box($val1, $val2, $val3, $val4, $color){
+    -webkit-box-shadow: $val1, $val2, $val3, $val4, $color;
+    -moz-box-shadow: $val1 $val2 $val3 $val4 $color;
+    box-shadow: $val1 $val2 $val3 $val4 $color;
+}
+
+@mixin absolute-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

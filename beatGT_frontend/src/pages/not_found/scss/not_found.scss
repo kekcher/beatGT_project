@@ -1,0 +1,30 @@
+@import '../../../global_styles/constants.scss';
+@import '../../../global_styles/mixins.scss';
+
+
+.notfound-box {
+    @include flex-column-around-center;
+    @include absolute-center;
+    height: 60%;
+    background-color: $box-color;
+    border-radius: 20px;
+    @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+    
+  
+    &__head {
+      @include media-text(white, 24pt, 94pt);
+      white-space: nowrap;
+    }
+  
+    &__icon {
+        @include media-text(transporant, 68pt, 194pt);
+    }
+
+    &__back-btn{
+        @include media-text(white, 14pt, 34pt);
+        border: none;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: $for-form;
+    }
+  }

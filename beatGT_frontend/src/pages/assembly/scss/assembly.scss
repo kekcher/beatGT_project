@@ -1,0 +1,122 @@
+@import "../../../global_styles/constants.scss";
+@import "../../../global_styles/mixins.scss";
+
+.assembly-box {
+    @include absolute-center;
+    background-color: $box-color;
+    @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+    border-radius: 1.5em;
+    width: 90%;
+    height: calc(100vh - 15%);
+    padding: 20px 40px;
+    overflow: auto;
+
+    &__head {
+        @include media-text(white, 16pt, 64pt);
+        text-align: center;
+    }
+
+    &_author-box {
+        @include flex-row-none-center;
+
+        &__avatar {
+            border-radius: 50%;
+        }
+
+        &__nickname {
+            @include media-text(white, 14pt, 32pt);
+            margin-left: 10px;
+        }
+    }
+
+    &_component-list {
+        list-style: none;
+
+        & > li {
+            border-bottom: 1px solid white;
+        }
+
+        & > li:last-child{
+            border-bottom: none;
+        } 
+
+        &_row{
+            padding: 10px 0;
+
+            &__note{
+                @include media-text(white, 12pt, 32pt);
+                margin-left: 20px;
+            }
+
+            &_info-box{
+                @include flex-column-around-center;
+                height: 90px;
+
+                &__price{
+                    @include media-text($price-color, 16pt, 26pt)
+                }
+
+                &__go-to-component{
+                    background-color: $for-form;
+                    border: none;
+                    border-radius: 5px;
+                    padding: 10px;
+                    @include media-text(white, 14pt, 20pt)
+                }
+            }
+        }
+
+        &__status-ok{
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+            @include media-text($price-color, 14pt, 26pt);
+        }
+
+        &__status-confuse{
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+            @include media-text(orange, 14pt, 26pt);
+        }
+    }
+
+    &_footer-box{
+        @include flex-arround-center;
+        background-color: $footer-color;
+        border-radius: 1.5em;
+        height: 80px;
+
+        &__price{
+            @include media-text(white, 10pt, 32pt)
+        }
+
+        &__like-btn{
+            border: none;
+            @include media-text(black, 10pt, 16pt);
+            border-radius: 5px;
+
+            &:disabled{
+                background-color: gray;
+                color: black;
+            }
+
+            &_like{
+                background-color: $price-color;
+                color: white;
+            }
+
+            &_dislike{
+                background-color: red;
+                color: white;
+            }
+        }
+
+        &__delete-btn{
+            border: none;
+            background-color: red;
+            @include media-text(white, 10pt, 16pt);
+            padding: 5px;
+        }
+    }
+}

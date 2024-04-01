@@ -1,0 +1,264 @@
+@import "../../../global_styles/constants.scss";
+@import "../../../global_styles/mixins.scss";
+
+.create-assembly-box{
+    width: 100%;
+    height: 100vh;
+
+    &_assembly-msg-box{
+        background-color: $box-color;
+        overflow-y: auto;
+        overflow-x: none;
+        padding: 20px 30px;
+        border-radius: 20px;
+        @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+
+        &_assembly-item-box{
+
+            margin-bottom: 20px;
+
+            &_logo-box{
+                @include flex-none-center;
+                position: relative;
+                width: 100%;
+
+                &__logo{
+                    width: 100px;
+                    height: 100px;
+                    fill: black;
+                }
+
+                &_status-box{
+                    @include flex-center-center;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    background-color: white;
+                    bottom: -2px;
+                    left: -6px;
+                    border-radius: 5px;
+
+                    &__icon{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &__note{
+                    @include media-text(white, 14pt, 26pt);
+                    margin-left: 10px;
+                }
+            }
+
+            &_error-list{
+                margin-top: 10px;
+                padding: 10px 30px;
+                background-color: $footer-color;
+                border-radius: 10px;
+
+                &__error{
+                    @include media-text($error-color, 8pt, 12pt);
+                }
+            }
+        }
+    }
+
+    &_add-component-box{
+        @include flex-column-around-center;
+        background-color: $box-color;
+        border-radius: 20px;
+        @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+        overflow: hidden;
+        margin: 0 40px;
+
+        &__head{
+            @include media-text(white, 16pt, 32pt);
+        }
+
+        &_component-list{
+            @include flex-column-none-center;
+            padding: 20px 0;
+            list-style: none;
+            background-color: $footer-color;
+            width: 80%;
+            max-height: 40%;
+            height: fit-content;
+            overflow-y: auto;
+
+            &>li{
+                border-bottom: 1px solid white;
+
+                &:last-child{
+                    border: none;
+                }
+            }
+
+            &__item{
+                text-align: center;
+                width: 80%;
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+                background-color: $box-color;
+                @include media-text(white, 8pt, 16pt);
+                padding: 10px 0;
+                cursor: pointer;
+            }
+        }
+
+        &_input-box{
+            @include flex-column-none-center;
+            width: 70%;
+
+            &__search{
+                width: 80%;
+                padding-left: 10px;
+                height: 50px;
+                @include media-text(black, 10pt, 16pt);
+                outline: none;
+                border: none;
+
+                &:focus, &:hover{
+                    outline: none;
+                }
+            }
+
+            &__number{
+                margin-top: 10px;
+                width: 10%;
+                text-align: center;
+                height: 50px;
+                @include media-text(black, 10pt, 16pt);
+                outline: none;
+                border: none;
+
+                &:focus, &:hover{
+                    outline: none;
+                }
+            }
+
+            &__note{
+                @include media-text(orange, 10pt, 14pt);
+                margin-top: 5px;
+            }
+
+        }
+
+        &_not-found-box{
+            @include flex-none-center;
+
+            &__note{
+                @include media-text($for-form, 10pt, 14pt);
+            }
+
+            &__create-btn{
+                @include media-text(black, 10pt, 14pt);
+                background-color: white;
+                border: none;
+                margin-left: 5px;
+                padding: 10px;
+            }
+        }
+
+        &_navigate-box{
+            @include flex-arr-center;
+
+            &__navigate-btn{
+                @include media-text(white, 8pt, 16pt);
+                background-color: $for-form;
+                border: none;
+
+                &:disabled{
+                    background-color: gray;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    &_assembly-form{
+        @include flex-column-none-center;
+        padding: 40px 0 10px 0;
+        position: relative;
+        background-color: $box-color;
+        border-radius: 20px;
+        @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+        overflow-y: auto;
+
+        &__clear{
+            position: absolute;
+            @include media-text($for-form, 10pt, 16pt);
+            top: 10px;
+            right: 10px;
+            text-decoration: underline;
+        }
+
+        &__name{
+            width: 70%;
+            padding: 10px 20px;
+            @include media-text(black, 12pt, 16pt);
+            margin-bottom: 20px;
+            outline: none;
+                border: none;
+
+                &:focus, &:hover{
+                    outline: none;
+                }
+        }
+
+        &_component-box{
+            @include flex-arr-center;
+            width: 100%;
+            padding: 0 40px;
+            margin-bottom: 20px;
+
+            &__name{
+                @include media-text(white, 10pt, 16pt);
+                margin-left: 5px;
+            }
+
+            &__price{
+                @include media-text($price-color, 10pt, 16pt);
+            }
+        }
+
+        &_save-box{
+            position: sticky;
+            @include flex-arr-center;
+            background-color: $footer-color;
+            width: 80%;
+            bottom: 0;
+            border-radius: 15px;
+            padding: 20px 0;
+
+            &_price-box{
+                @include flex-row;
+
+                &__note{
+                    @include media-text(white, 14pt, 20pt);
+                }
+
+                &__price{
+                    @include media-text($price-color, 14pt, 20pt);
+                    margin-left: 5px;
+                }
+            }
+
+            &__save{
+                padding: 10px;
+                background-color: $for-form;
+                border: none;
+                @include media-text(white, 14pt, 20pt);
+            }
+        }
+    }
+
+    &_choose-box{
+        position: absolute;
+        bottom: 10px;
+
+        &_row-svg{
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

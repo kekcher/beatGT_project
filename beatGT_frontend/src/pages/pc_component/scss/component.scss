@@ -1,0 +1,70 @@
+@import "../../../global_styles/mixins.scss";
+@import "../../../global_styles/constants.scss";
+
+.pc-component-container {
+    position: relative;
+    @include flex-center-center;
+    height: 100vh;
+
+    &__head {
+        position: absolute;
+        top: 10%;
+        @include media-text(white, 20pt, 32pt);
+        background-color: $box-color;
+        border-radius: 10px;
+        @include shadow-box(1px, 7px, 6px, 7px, rgba(255, 255, 255, 0.2));
+    }
+
+    &_note-box {
+        background-color: $box-color;
+        list-style: none;
+        height: fit-content;
+        max-height: 55%;
+        border-radius: 20px;
+        @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+
+        &>li {
+            @include flex-row;
+            max-width: 100%;
+        }
+
+        &__note {
+            @include media-text(white, 14pt, 26pt);
+            margin-right: 4px;
+        }
+
+        &__note-item {
+            @include media-text($for-form, 14pt, 26pt);
+
+            &_green {
+                @include media-text($price-color, 14pt, 26pt);
+            }
+
+            &_red {
+                @include media-text($error-color, 14pt, 26pt);
+            }
+        }
+    }
+
+    &__back-btn {
+        background-color: $for-form;
+        @include media-text(white, 12pt, 20pt);
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    &_logo-box {
+        @include flex-center-center;
+        background-color: $box-color;
+        border-radius: 20px;
+        height: calc(100vh - 50%);
+        @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+
+        &__logo {
+            max-height: 100%;
+            max-width: 100%;
+            border-radius: 20px;
+        }
+    }
+}

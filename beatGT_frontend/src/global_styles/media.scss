@@ -1,0 +1,1407 @@
+@import "../global_styles/constants.scss";
+@import "../global_styles/mixins.scss";
+
+@media screen and (max-width: 320px) {
+
+    .footer-box {
+        padding: 10px 10px;
+    }
+
+    .header-box{
+        &_navigate-box{
+            display: none;
+        }
+
+        &_profile-box{
+            display: none;
+        }
+    }
+
+    .modal-navigete-list{
+        @include flex-column-none-center;
+    }
+
+    .login-box {
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .background-svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .home-box {
+        padding: 160px 20px 50px 20px;
+
+        &_filter-box {
+            width: 80%;
+
+            &__note {
+                padding: 0 5px;
+            }
+
+            &__filter {
+                padding: 0 5px;
+            }
+        }
+
+        &_assembly-box {
+            width: 95%;
+            height: 200px;
+            margin: 0 0 10px 0;
+            padding: 0;
+        }
+    }
+
+    .form-control {
+        &__input-box {
+            height: 35px;
+
+            &__form-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__submit {
+            width: 180px;
+            height: 40px;
+        }
+    }
+
+    .registration-container {
+        &__form {
+            width: 90%;
+            border-radius: 20px;
+        }
+
+        &__avatar-box {
+            width: 80%;
+            border-radius: 20px;
+        }
+    }
+
+    .choose-box {
+        bottom: 4em;
+    }
+
+    .row-svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .loader-container {
+        &_loader-box {
+            width: 40px;
+            height: 40px;
+
+            &__icon {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    .page-loader-container {
+        &_loader-box {
+            width: 60px;
+            height: 60px;
+
+            &__icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &__note {
+            width: 80%;
+        }
+    }
+
+    .pc-component-container {
+        &__head {
+            padding: 15px;
+        }
+
+        &_note-box {
+            width: 90%;
+            overflow: auto;
+            padding: 15px;
+
+            &>li {
+                margin-bottom: 10px;
+            }
+
+            &__note-item {
+                margin-left: 5px;
+            }
+        }
+
+        &_logo-box {
+            padding: 20px;
+            width: 90%;
+        }
+    }
+
+    .notfound-box {
+        width: 80%;
+    }
+
+    .assembly-box {
+        &_author-box {
+            margin-top: 10px;
+
+            &__avatar {
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        &_component-list {
+            margin: 10px 0;
+
+            &_row {
+                @include flex-column-none-center;
+
+                &__logo {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                &__note {
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            }
+        }
+
+        &_footer-box {
+            padding: 0 15px;
+
+            &__like-btn {
+                padding: 5px;
+            }
+        }
+    }
+
+    .create-component-box {
+        padding: 20px 30px;
+
+        &_component-items-list {
+            margin: 10px 0 50px 0;
+
+            &_item-box {
+                @include flex-column-center-center;
+                margin-top: 10px;
+
+                &__label {
+                    text-align: center;
+                }
+
+                &_input-box {
+                    margin-left: 0;
+                    width: 90%;
+                    height: 35px;
+
+                    &__input {
+                        padding-left: 10px;
+                    }
+
+                    &__icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &__note {
+                    text-align: center;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &__logo {
+            width: 50px;
+            height: 50px;
+            margin-top: 5px;
+        }
+    }
+
+    .create-component-btn-box {
+        &__create-btn {
+            height: 40px;
+        }
+
+        &__error {
+            text-align: center;
+        }
+    }
+
+    .create-component-back-btn {
+        padding: 10px;
+    }
+
+    .create-assembly-box{
+        @include flex-center-center;
+
+        &_assembly-msg-box{
+            width: 90%;
+            height: 70vh;
+        }
+        
+        &_add-component-box{
+            width: 90%;
+            height: 70vh;
+
+            &_navigate-box{
+                width: 100%;
+
+                &__navigate-btn{
+                    padding: 10px 15px;
+                }
+            }
+        }
+
+        &_assembly-form{
+            width: 90%;
+            height: 70vh;
+
+            &_component-box{
+                &__logo{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+
+    .footer-box {
+        padding: 15px 20px;
+    }
+
+    .header-box{
+        &_navigate-box{
+            display: none;
+        }
+
+        &_profile-box{
+            display: none;
+        }
+    }
+
+    .modal-navigete-list{
+        @include flex-column-none-center;
+    }
+
+    .login-box {
+        width: 80%;
+        border-radius: 30px;
+    }
+
+    .background-svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .home-box {
+        padding: 160px 20px 50px 20px;
+
+        &_filter-box {
+            width: 70%;
+
+            &__note {
+                padding: 0 5px;
+            }
+
+            &__filter {
+                padding: 0 5px;
+            }
+        }
+
+        &_assembly-box {
+            width: 85%;
+            height: 250px;
+            margin: 0 0px 30px 0;
+            padding: 10px;
+        }
+    }
+
+    .form-control {
+        &__input-box {
+            height: 50px;
+
+            &__form-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__submit {
+            width: 200px;
+            height: 50px;
+        }
+    }
+
+    .registration-container {
+        &__form {
+            width: 80%;
+            border-radius: 20px;
+        }
+
+        &__avatar-box {
+            width: 80%;
+            border-radius: 20px;
+        }
+    }
+
+    .choose-box {
+        bottom: 4em;
+    }
+
+    .row-svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loader-container {
+        &_loader-box {
+            width: 50px;
+            height: 50px;
+
+            &__icon {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    .page-loader-container {
+        &_loader-box {
+            width: 90px;
+            height: 90px;
+
+            &__icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__note {
+            width: 80%;
+        }
+    }
+
+    .pc-component-container {
+        &__head {
+            padding: 20px;
+        }
+
+        &_note-box {
+            width: 90%;
+            overflow: auto;
+            padding: 20px;
+
+            &>li {
+                margin-bottom: 15px;
+            }
+
+            &__note-item {
+                margin-left: 8px;
+            }
+        }
+
+        &_logo-box {
+            padding: 20px;
+            width: 90%;
+        }
+    }
+
+    .notfound-box {
+        width: 80%;
+    }
+
+    .assembly-box {
+        &_author-box {
+            margin-top: 0;
+
+            &__avatar {
+                height: 60px;
+                width: 60px;
+            }
+        }
+
+        &_component-list {
+            margin: 0;
+
+            &_row {
+                @include flex-column-none-center;
+
+                &__logo {
+                    width: 90px;
+                    height: 90px;
+                }
+
+                &__note {
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            }
+        }
+
+        &_footer-box {
+            padding: 0 25px;
+
+            &__like-btn {
+                padding: 10px;
+            }
+        }
+    }
+
+    .create-component-box {
+        padding: 25px 35px;
+
+        &_component-items-list {
+            margin: 15px 0 55px 0;
+
+            &_item-box {
+                @include flex-column-center-center;
+                margin-top: 15px;
+
+                &__label {
+                    text-align: center;
+                }
+
+                &_input-box {
+                    margin-left: 0;
+                    width: 80%;
+                    height: 40px;
+
+                    &__input {
+                        padding-left: 10px;
+                    }
+
+                    &__icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &__note {
+                    text-align: center;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &__logo {
+            width: 80px;
+            height: 80px;
+            margin-top: 5px;
+        }
+    }
+
+    .create-component-btn-box {
+        &__create-btn {
+            height: 45px;
+        }
+
+        &__error {
+            text-align: center;
+        }
+    }
+
+    .create-component-back-btn {
+        padding: 15px;
+    }
+
+    .create-assembly-box{
+        @include flex-center-center;
+
+        &_assembly-msg-box{
+            width: 90%;
+            height: 70vh;
+        }
+        
+        &_add-component-box{
+            width: 90%;
+            height: 70vh;
+
+            &_navigate-box{
+                width: 100%;
+
+                &__navigate-btn{
+                    padding: 15px 20px;
+                }
+            }
+        }
+
+        &_assembly-form{
+            width: 90%;
+            height: 70vh;
+
+            &_component-box{
+                &__logo{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 540px) and (max-width: 720px) {
+
+    .footer-box {
+        padding: 15px 30px;
+    }
+
+    .header-box{
+        &_navigate-box{
+            display: none;
+        }
+
+        &_profile-box{
+            display: none;
+        }
+    }
+
+    .modal-navigete-list{
+        @include flex-column-none-center;
+    }
+
+    .login-box {
+        width: 80%;
+        border-radius: 30px;
+    }
+
+    .background-svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .home-box {
+        padding: 160px 30px 50px 30px;
+
+        &_filter-box {
+            width: 60%;
+
+            &__note {
+                padding: 0 10px;
+            }
+
+            &__filter {
+                padding: 0 10px;
+            }
+        }
+
+        &_assembly-box {
+            width: 85%;
+            height: 300px;
+            margin: 0 0px 30px 0;
+            padding: 20px;
+        }
+    }
+
+    .form-control {
+        &__input-box {
+            height: 50px;
+
+            &__form-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__submit {
+            width: 200px;
+            height: 50px;
+        }
+    }
+
+    .registration-container {
+        &__form {
+            width: 80%;
+            border-radius: 20px;
+        }
+
+        &__avatar-box {
+            width: 80%;
+            border-radius: 20px;
+        }
+    }
+
+    .choose-box {
+        bottom: 4em;
+    }
+
+    .row-svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loader-container {
+        &_loader-box {
+            width: 60px;
+            height: 60px;
+
+            &__icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .page-loader-container {
+        &_loader-box {
+            width: 110px;
+            height: 110px;
+
+            &__icon {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        &__note {
+            width: 80%;
+            margin-left: 20px;
+        }
+    }
+
+    .pc-component-container {
+        &__head {
+            padding: 20px;
+        }
+
+        &_note-box {
+            width: 80%;
+            overflow: auto;
+            padding: 20px;
+
+            &>li {
+                margin-bottom: 15px;
+            }
+
+            &__note-item {
+                margin-left: 8px;
+            }
+        }
+
+        &_logo-box {
+            padding: 20px;
+            width: 90%;
+        }
+    }
+
+    .notfound-box {
+        width: 60%;
+    }
+
+    .assembly-box {
+        &_author-box {
+            margin-top: 0;
+
+            &__avatar {
+                height: 70px;
+                width: 70px;
+            }
+        }
+
+        &_component-list {
+            margin: 0;
+
+            &_row {
+                position: relative;
+                @include flex-none-center;
+
+                &__logo {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                &__note {
+                    max-width: 50%;
+                }
+
+                &_info-box {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        &_footer-box {
+            padding: 0 25px;
+
+            &__like-btn {
+                padding: 15px;
+            }
+        }
+    }
+
+    .create-component-box {
+        padding: 30px 40px;
+
+        &_component-items-list {
+            margin: 20px 0 60px 0;
+
+            &_item-box {
+                @include flex-column-center-center;
+                margin-top: 20px;
+
+                &__label {
+                    text-align: center;
+                }
+
+                &_input-box {
+                    margin-left: 0;
+                    width: 70%;
+                    height: 50px;
+
+                    &__input {
+                        padding-left: 15px;
+                    }
+
+                    &__icon {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                &__note {
+                    text-align: center;
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &__logo {
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+    }
+
+    .create-component-btn-box {
+        &__create-btn {
+            height: 50px;
+        }
+
+        &__error {
+            text-align: center;
+        }
+    }
+
+    .create-component-back-btn {
+        padding: 15px;
+    }
+
+    .create-assembly-box{
+        @include flex-center-center;
+
+        &_assembly-msg-box{
+            width: 70%;
+            height: 70vh;
+        }
+        
+        &_add-component-box{
+            width: 80%;
+            height: 70vh;
+
+            &_navigate-box{
+                width: 100%;
+
+                &__navigate-btn{
+                    padding: 20px 25px;
+                }
+            }
+        }
+
+        &_assembly-form{
+            width: 80%;
+            height: 70vh;
+
+            &_component-box{
+                &__logo{
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+
+    .footer-box {
+        padding: 20px 40px;
+    }
+
+    .header-box{
+        &_navigate-box{
+            display: none;
+        }
+
+        &_profile-box{
+            display: none;
+        }
+    }
+
+    .modal-navigete-list{
+        @include flex-column-none-center;
+    }
+
+    .login-box {
+        width: 80%;
+        border-radius: 30px;
+    }
+
+    .background-svg {
+        width: 140px;
+        height: 140px;
+    }
+
+    .home-box {
+        padding: 160px 30px 50px 30px;
+
+        &_filter-box {
+            width: 50%;
+
+            &__note {
+                padding: 0 10px;
+            }
+
+            &__filter {
+                padding: 0 10px;
+            }
+        }
+
+        &_assembly-box {
+            width: 70%;
+            height: 300px;
+            margin: 0 0px 30px 0;
+            padding: 20px;
+        }
+    }
+
+    .form-control {
+        &__input-box {
+            height: 50px;
+
+            &__form-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__submit {
+            width: 200px;
+            height: 50px;
+        }
+    }
+
+    .registration-container {
+        &__form {
+            width: 40%;
+            border-radius: 20px;
+        }
+
+        &__avatar-box {
+            width: 50%;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+    }
+
+    .choose-box {
+        bottom: 4em;
+        display: none;
+    }
+
+    .row-svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loader-container {
+        &_loader-box {
+            width: 70px;
+            height: 70px;
+
+            &__icon {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    .page-loader-container {
+        &_loader-box {
+            width: 150px;
+            height: 150px;
+
+            &__icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__note {
+            width: 80%;
+            margin-left: 20px;
+        }
+    }
+
+    .pc-component-container {
+        &__head {
+            padding: 20px;
+        }
+
+        &_note-box {
+            width: 50%;
+            overflow: auto;
+            padding: 20px;
+
+            &>li {
+                margin-bottom: 15px;
+            }
+
+            &__note-item {
+                margin-left: 8px;
+            }
+        }
+
+        &_logo-box {
+            padding: 20px;
+            width: 35%;
+            margin-left: 2em;
+        }
+    }
+
+    .notfound-box {
+        width: 50%;
+    }
+
+    .assembly-box {
+        &_author-box {
+            margin-top: 0;
+
+            &__avatar {
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        &_component-list {
+            margin: 10px 0;
+
+            &_row {
+                position: relative;
+                @include flex-none-center;
+
+                &__logo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                &__note {
+                    max-width: 50%;
+                }
+
+                &_info-box {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        &_footer-box {
+            padding: 0 40px;
+
+            &__like-btn {
+                padding: 20px;
+            }
+        }
+    }
+
+    .create-component-box {
+        padding: 20px 30px;
+
+        &_component-items-list {
+            margin: 15px 0 55px 0;
+
+            &_item-box {
+                @include flex-row-none-center;
+                margin-top: 20px;
+
+                &__label {
+                    white-space: nowrap;
+                }
+
+                &_input-box {
+                    margin-left: 5px;
+                    width: 40%;
+                    height: 40px;
+
+                    &__input {
+                        padding-left: 15px;
+                    }
+
+                    &__icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &__note {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &__logo {
+            width: 100px;
+            height: 100px;
+            margin-top: 0;
+        }
+    }
+
+    .create-component-btn-box {
+        &__create-btn {
+            height: 50px;
+        }
+
+        &__error {
+            text-align: center;
+        }
+    }
+
+    .create-component-back-btn {
+        padding: 15px;
+    }
+
+    .create-assembly-box{
+        @include flex-center-center;
+
+        &_assembly-msg-box{
+            width: 60%;
+            height: 70vh;
+        }
+        
+        &_add-component-box{
+            width: 60%;
+            height: 70vh;
+
+            &_navigate-box{
+                width: 100%;
+
+                &__navigate-btn{
+                    padding: 20px 25px;
+                }
+            }
+        }
+
+        &_assembly-form{
+            width: 60%;
+            height: 70vh;
+
+            &_component-box{
+                &__logo{
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .footer-box {
+        padding: 20px 40px;
+    }
+
+    .header-box{
+        &_navigate-box{
+            @include flex-arround-center;
+        }
+
+        &_profile-box{
+            @include flex-none-center;
+        }
+
+        &__burger{
+            display: none;
+        }
+    }
+
+    .modal-navigete-list{
+        display: none;
+    }
+
+    .login-box {
+        width: 50%;
+        border-radius: 30px;
+    }
+
+    .background-svg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .home-box {
+        padding: 160px 40px 50px 40px;
+
+        &_filter-box {
+            width: 40%;
+
+            &__note {
+                padding: 0 10px;
+            }
+
+            &__filter {
+                padding: 0 10px;
+            }
+        }
+
+        &_assembly-box {
+            width: 550px;
+            height: 300px;
+            margin: 0 20px 50px 20px;
+            padding: 20px;
+        }
+    }
+
+    .form-control {
+        &__input-box {
+            height: 55px;
+
+            &__form-icon {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        &__submit {
+            width: 220px;
+            height: 50px;
+        }
+    }
+
+    .registration-container {
+        &__form {
+            width: 30%;
+            border-radius: 30px;
+            margin-right: 4em;
+        }
+
+        &__avatar-box {
+            width: 30%;
+            border-radius: 30px;
+        }
+    }
+
+    .choose-box {
+        display: none;
+        border: 1px solid black;
+    }
+
+    .loader-container {
+        &_loader-box {
+            width: 80px;
+            height: 80px;
+
+            &__icon {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+
+    .page-loader-container {
+        &_loader-box {
+            width: 150px;
+            height: 150px;
+
+            &__icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__note {
+            width: 80%;
+            margin-left: 20px;
+        }
+    }
+
+    .pc-component-container {
+        &__head {
+            padding: 20px;
+        }
+
+        &_note-box {
+            width: 50%;
+            overflow: auto;
+            padding: 30px 20px;
+
+            &>li {
+                margin-bottom: 20px;
+            }
+
+            &__note-item {
+                margin-left: 10px;
+            }
+        }
+
+        &_logo-box {
+            padding: 40px;
+            width: 40%;
+            margin-left: 4em;
+        }
+    }
+
+    .notfound-box {
+        width: 40%;
+    }
+
+    .assembly-box {
+        &_author-box {
+            margin-top: 0;
+
+            &__avatar {
+                height: 80px;
+                width: 80px;
+            }
+        }
+
+        &_component-list {
+            margin: 20px 0;
+
+            &_row {
+                position: relative;
+                @include flex-none-center;
+
+                &__logo {
+                    width: 120px;
+                    height: 120px;
+                }
+
+                &__note {
+                    max-width: 60%;
+                }
+
+                &_info-box {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        &_footer-box {
+            padding: 0 50px;
+
+            &__like-btn {
+                padding: 20px;
+            }
+        }
+    }
+
+    .create-component-box {
+        padding: 40px 50px;
+
+        &_component-items-list {
+            margin: 20px 0 60px 0;
+
+            &_item-box {
+                @include flex-row-none-center;
+                margin-top: 20px;
+
+                &__label {
+                    white-space: nowrap;
+                }
+
+                &_input-box {
+                    margin-left: 5px;
+                    width: 30%;
+                    height: 50px;
+
+                    &__input {
+                        padding-left: 20px;
+                    }
+
+                    &__icon {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                &__note {
+                    margin-left: 2px;
+                }
+            }
+        }
+
+        &__logo {
+            width: 100px;
+            height: 100px;
+            margin-top: 0;
+        }
+    }
+
+    .create-component-btn-box {
+        &__create-btn {
+            height: 50px;
+        }
+
+        &__error {
+            margin-top: 5px;
+        }
+    }
+
+    .create-component-back-btn {
+        padding: 20px;
+    }
+
+    .create-assembly-box{
+        @include flex-center-center;
+
+        &_assembly-msg-box{
+            width: 25%;
+            height: 80vh;
+        }
+        
+        &_add-component-box{
+            width: 40%;
+            height: 80vh;
+
+            &_navigate-box{
+                width: 60%;
+
+                &__navigate-btn{
+                    padding: 20px 30px;
+                }
+            }
+        }
+
+        &_assembly-form{
+            width: 25%;
+            height: 80vh;
+
+            &_component-box{
+                &__logo{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+}

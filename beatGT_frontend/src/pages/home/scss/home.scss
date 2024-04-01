@@ -1,0 +1,126 @@
+@import "../../../global_styles/constants.scss";
+@import "../../../global_styles/mixins.scss";
+
+
+
+.home-box {
+    position: relative;
+    @include flex-around-wrap;
+    overflow-y: auto;
+    width: 100%;
+    height: 100vh;
+
+    &_filter-box{
+        @include flex-around-wrap;
+        max-width: 100%;
+        position: absolute;
+        top: 120px;
+
+        &__note{
+            @include media-text($box-color, 10pt, 14pt);
+        }
+
+        &__filter{
+            @include media-text(white, 10pt, 14pt);
+            text-decoration: none;
+
+            &_active{
+                color: $price-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__not-found {
+        @include absolute-center;
+        @include media-text(white, 24pt, 64pt)
+    }
+
+    &_assembly-box {
+        @include flex-row;
+        background-color: $footer-color;
+
+        &_logo-box {
+            @include shadow-box(4px, 4px, 8px, 0px, rgba(0, 144, 255, 0.2));
+            width: 30%;
+            height: 100%;
+
+            &__logo {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &_info-box {
+            width: 40%;
+            padding: 10px;
+
+            &__name {
+                @include media-text(white, 12pt, 16pt);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 10px;
+            }
+
+            &__author {
+                @include media-text($box-color, 10pt, 14pt);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 10px;
+            }
+
+            &__item {
+                @include media-text(orange, 8pt, 12pt);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-bottom: 5px;
+            }
+        }
+
+        &_stats-box {
+            @include flex-column-around-center;
+            width: 30%;
+            padding: 10px;
+
+            &__price {
+                @include media-text($price-color, 12pt, 16pt);
+            }
+
+            &__navigate-btn{
+                padding: 5px;
+                width: 80%;
+                height: 40px;
+                border: none;
+                border-radius: 15px;
+                @include shadow-box(4px, 4px, 8px, 0px, rgba(0, 144, 255, 0.2));
+                @include media-text(black, 8pt, 12pt);
+            }
+
+            &_like-box{
+                @include flex-row-none-center;
+
+                &__note{
+                    @include media-text(white, 10pt, 14pt);
+                }
+
+                &__icon{
+                    margin-left: 5px;
+                    width: 30px;
+                    height: 30px;
+
+                    &_like > path {
+                        fill: white;
+                    }
+
+                    &_dislike > path{
+                        fill: red;
+                    }
+
+                }
+            }
+        }
+    }
+}

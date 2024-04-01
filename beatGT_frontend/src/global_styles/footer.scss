@@ -1,0 +1,29 @@
+@import "../global_styles/mixins.scss";
+@import "../global_styles/constants.scss";
+
+.footer-box{
+    @include flex-arround-center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: $footer-color;
+    border-top: 1px solid $box-color;
+    z-index: 100;
+
+    &__note{
+        @include media-text(white, 8pt, 16pt);
+    }
+
+    &_stats-box{
+        @include flex-row;
+
+        &__stats-note{
+            @include media-text($box-color, 5pt, 14pt);
+        }
+
+        &__stats-count{
+            @include media-text(white, 5pt, 14pt);
+            margin-left: 5px;
+        }
+    }
+}

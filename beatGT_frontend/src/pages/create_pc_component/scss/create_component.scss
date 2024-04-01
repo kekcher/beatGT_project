@@ -1,0 +1,101 @@
+@import "../../../global_styles/constants.scss";
+@import "../../../global_styles/mixins.scss";
+
+.create-component-box {
+    @include absolute-center;
+    background-color: $box-color;
+    border-radius: 2em;
+    @include shadow-box(1px, 9px, 8px, 9px, rgba(255, 255, 255, 0.2));
+    height: 80vh;
+    width: 90%;
+    overflow-y: auto;
+
+    &__head {
+        @include media-text(white, 18pt, 42pt);
+        text-align: center;
+    }
+
+    &_component-items-list {
+        list-style: none;
+
+        &_item-box {
+            width: 100%;
+
+            &__label {
+                @include media-text(white, 12pt, 24pt);
+            }
+
+            &_input-box {
+                position: relative;
+                @include flex-none-center;
+                background-color: white;
+                border-radius: 10px;
+                border: 2px solid $for-form;
+
+                &:has(input:focus) {
+                    @include shadow-box(1px, 3px, 2px, 3px, rgba(189, 189, 189, 0.2));
+                    border: 2px solid black;
+                }
+
+                &__input {
+                    @include media-text(black, 12pt, 20pt);
+                    height: 100%;
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
+                    width: 90%;
+                    -moz-appearance: textfield;
+
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+
+                &__icon {
+                    position: absolute;
+                    right: 10px;
+                    fill: black;
+                }
+            }
+
+            &__note {
+                @include media-text($warning-color, 10pt, 16pt);
+                margin-left: 2px
+            }
+        }
+    }
+}
+
+.create-component-btn-box {
+    position: sticky;
+    background-color: #a38fff;
+    left: 0;
+    bottom: 20px;
+    @include flex-column-center-center;
+    width: 100%;
+
+    &__create-btn {
+        width: 30%;
+        background-color: $for-form;
+        border: none;
+        border-radius: 5px;
+        @include media-text(white, 12pt, 28pt)
+    }
+
+    &__error {
+        @include media-text(red, 10pt, 16pt);
+        margin-top: 5px;
+    }
+}
+
+.create-component-back-btn{
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: none;
+    background-color: $price-color;
+    @include media-text(white, 10pt, 16pt)
+}

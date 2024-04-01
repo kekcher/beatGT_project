@@ -1,0 +1,173 @@
+@import './constants.scss';
+@import './mixins.scss';
+
+@font-face {
+    font-family: 'Yanone';
+    src: url("../../public/fonts/YanoneKaffeesatz-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Yanone';
+}
+
+body {
+    background-color: $main-background;
+    overflow: hidden;
+}
+
+img {
+    object-fit: cover;
+}
+
+.choose-box {
+    @include flex-row;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}
+
+.background-svg {
+    position: absolute;
+    opacity: 0.5;
+    animation: flip-flip 1s linear infinite;
+
+    &_1 {
+        top: 20px;
+        left: 20px;
+    }
+
+    &_2 {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    &_3 {
+        bottom: 20em;
+        left: 20px;
+    }
+
+    &_4 {
+        right: 2em;
+        top: 3em;
+    }
+
+    &_5 {
+        right: 4em;
+        bottom: 12em;
+    }
+
+    &_6 {
+        right: 1em;
+        bottom: 25em;
+    }
+}
+
+.loader-container {
+    @include flex-row-center-center;
+    width: fit-content;
+
+    &_loader-box {
+        position: relative;
+        border-radius: 50%;
+        animation: loader_wheel 2s ease infinite;
+
+        &__icon {
+            position: absolute;
+        }
+    }
+
+    &__note {
+        @include media-text(white, 12pt, 16pt);
+        margin-left: 10px;
+    }
+}
+
+.page-loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include flex-row-center-center;
+    width: fit-content;
+
+
+    &_loader-box {
+        position: relative;
+        border-radius: 50%;
+        animation: loader_wheel 2s ease infinite;
+
+        &__icon {
+            position: absolute;
+        }
+    }
+
+    &__note {
+        @include media-text(white, 16pt, 96pt);
+        margin-left: 10px;
+    }
+}
+
+.loader-icon-1 {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.loader-icon-2 {
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.loader-icon-3 {
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.loader-icon-4 {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.none {
+    display: none;
+}
+
+@keyframes loader_wheel {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes flip-flip {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

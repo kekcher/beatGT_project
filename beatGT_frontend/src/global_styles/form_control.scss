@@ -1,0 +1,99 @@
+@import '../global_styles/mixins.scss';
+@import '../global_styles/constants.scss';
+
+.form-control {
+    &__input-box {
+        @include flex-none-center;
+        position: relative;
+        width: 80%;
+        background-color: white;
+        border-radius: 5px;
+
+        &:has(input:focus) {
+            -webkit-box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        &>input {
+            width: 90%;
+            height: 100%;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            padding-left: 20px;
+            @include media-text(black, 10pt, 16pt);
+
+            &:focus {
+                outline: none;
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        &__form-icon {
+            position: absolute;
+            right: 15px;
+        }
+    }
+
+    &__submit {
+        @include media-text(white, 8pt, 14pt);
+        border-radius: 10px;
+        border: none;
+        background-color: $for-form;
+
+        &:hover {
+            border: 2px solid $for-form;
+            background-color: white;
+            color: $for-form;
+            cursor: pointer;
+        }
+    }
+
+    &__range {
+        width: 70%;
+    }
+
+    &__file {
+        position: relative;
+        display: inline-block;
+
+        &__file-btn {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+            @include media-text(white, 10pt, 16pt);
+            vertical-align: middle;
+            color: white;
+            text-align: center;
+            border-radius: 4px;
+            background-color: $for-form;
+            line-height: 22px;
+            height: 40px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border: none;
+            margin: 0;
+            transition: background-color 0.2s;
+        }
+
+        &__file-text {
+            padding: 0 10px;
+            line-height: 40px;
+            display: inline-block;
+            @include media-text(white, 8pt, 14pt);
+        }
+
+        &>input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            display: block;
+            width: 0;
+            height: 0;
+        }
+    }
+}
