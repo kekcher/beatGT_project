@@ -364,7 +364,7 @@ export default function CreateAssembly() {
 
     //Заполнение иформации для сравненяи жёсткого диска
     function setCheckDisk(data) {
-        setCheckInfoSession('hard_disk',[...checkInfo.gpu, {
+        setCheckInfoSession('hard_disk',[...checkInfo.hard_disk, {
             connector: data.connector,
             power_consumption: data.power_consumption
         }]);
